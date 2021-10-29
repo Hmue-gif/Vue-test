@@ -1,0 +1,28 @@
+Vue Js
+---------
+modern javascript framework
+
+SPA => single page application => no loading
+                               => result in a much faster and smoother website experience 
+
+normal website ===request===> server
+                every component<===> request<==>response <====> server
+
+vue website ===== (initial) request =====> server
+                           response <====== Vue Js bundle
+                           components ======> Vue Js bundle=>(not connect with)server
+
+
+=> cdn Vue
+=>const (name) = Vue.createApp({ 
+
+})
+
+=>(name).mount("id/class name")
+
+=> template 
+=> dynamic data => data(){
+    return{
+        data  ......
+    }
+}

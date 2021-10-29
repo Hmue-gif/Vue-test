@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.2"></script>
+</head>
+<body>
+
+    <h3>Vue Js Learing</h3>
+    <div class="bio">
+        <h4>My name is {{name}} </h4>
+        <h4>My age is {{age}} </h4> 
+        <h4>My blood is {{blood}} </h4>
+
+    </div>
+
+    <div class="friBio">
+        <h4>My friend name is {{name}} </h4>
+        <h4>My friend age is {{age}} </h4> 
+        <h4>My friend blood is {{blood}} </h4>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return{
+                    name : "Hmue Thiha Naung",
+                    age : 20,
+                    blood : "B"
+                }
+            }
+        });
+
+        const second = Vue.createApp({
+            data(){
+                return{
+                    name : "Aung Kyaw Tun",
+                    age : 21,
+                    blood : "O"
+                }
+            }
+        });
+
+        app.mount(".bio")
+        second.mount(".friBio")
+
+    </script>
+</body>
+</html>

@@ -9,44 +9,46 @@
 </head>
 <body>
 
-    <h3>Vue Js Learing</h3>
-    <div class="bio">
-        <h4>My name is {{name}} </h4>
-        <h4>My age is {{age}} </h4> 
-        <h4>My blood is {{blood}} </h4>
+    <h3>Vue3 learning</h3>
+    <div class="person1">
+        <h4>Name : {{name}} </h4>
+        <h4>Age : {{age}} </h4>
+        <h4>Gender : {{gender}} </h4>
+    </div><br>
 
+    <div class="person2">
+        <h4>Name : {{name}} </h4>
+        <h4>Age : {{age}} </h4>
+        <h4>Gender : {{gender}} </h4>
     </div>
-
-    <div class="friBio">
-        <h4>My friend name is {{name}} </h4>
-        <h4>My friend age is {{age}} </h4> 
-        <h4>My friend blood is {{blood}} </h4>
-    </div>
-
     <script>
-        const app = Vue.createApp({
+        let p1 = Vue.createApp({
+            // template : "<h4>city</h4>"
             data(){
                 return{
                     name : "Hmue Thiha Naung",
                     age : 20,
-                    blood : "B"
+                    gender : "male"
                 }
             }
+
         });
 
-        const second = Vue.createApp({
+        let p2 = Vue.createApp({
+            // template : "<h4>city</h4>"
             data(){
                 return{
-                    name : "Aung Kyaw Tun",
-                    age : 21,
-                    blood : "O"
+                    name : "Htet Htet Soe",
+                    age : 19,
+                    gender : "female"
                 }
             }
+
         });
 
-        app.mount(".bio")
-        second.mount(".friBio")
-
+        p1.mount(".person1")
+        p2.mount(".person2")
     </script>
+
 </body>
 </html>

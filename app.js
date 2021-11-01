@@ -5,6 +5,14 @@ const app = Vue.createApp({
             author : "brendan erich",
             age: 50
         }
+    },
+    methods:{
+        changeName(){
+            this.title = "Hello Javascript"
+        },
+        increaseAge(){
+            this.age++;
+        }
     }
 });
 

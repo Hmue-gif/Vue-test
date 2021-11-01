@@ -9,46 +9,39 @@
 </head>
 <body>
 
-    <h3>Vue3 learning</h3>
-    <div class="person1">
+    <h3>Vue Learning</h3>
+    <div class="person">
         <h4>Name : {{name}} </h4>
-        <h4>Age : {{age}} </h4>
-        <h4>Gender : {{gender}} </h4>
-    </div><br>
+        <h4>Age : {{age}}</h4>
+        <h4>Job : {{job}} </h4>
+        <h4>Education : {{edu}} </h4>
 
-    <div class="person2">
-        <h4>Name : {{name}} </h4>
-        <h4>Age : {{age}} </h4>
-        <h4>Gender : {{gender}} </h4>
+        <button v-on:click = "age++">change age</button><br>
+        <button v-on:click = "changeName">change name</button>
     </div>
+
     <script>
-        let p1 = Vue.createApp({
-            // template : "<h4>city</h4>"
+        const p = Vue.createApp({
             data(){
                 return{
                     name : "Hmue Thiha Naung",
                     age : 20,
-                    gender : "male"
+                    job : "none",
+                    edu : "third yrs"
                 }
+            },
+            method: {
+               changeName(){
+                   this.name = "aung";
+               }
             }
+          
+           
 
-        });
+        })
 
-        let p2 = Vue.createApp({
-            // template : "<h4>city</h4>"
-            data(){
-                return{
-                    name : "Htet Htet Soe",
-                    age : 19,
-                    gender : "female"
-                }
-            }
-
-        });
-
-        p1.mount(".person1")
-        p2.mount(".person2")
+        p.mount(".person")
     </script>
-
+   
 </body>
 </html>

@@ -18,11 +18,14 @@ vue website ===== (initial) request =====> server
 
 })
 
-=>(name).mount("id/class name")
+=>(name).mount("id/class of div")
 
 => template 
 => dynamic data => data(){
     return{
-        data  ......
+        data  ...... => {{data}}
     }
 }
+
+=> event => v-on:(event)="function" => v-on === @
+=> condition => v-if => (true/false)

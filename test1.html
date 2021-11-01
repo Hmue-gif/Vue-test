@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- vue cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.2"></script>
+</head>
+<body>
+   <h3>Book Items</h3>
+  
+
+   <div class="data">
+       <div v-if="bookData">
+        <p>Book name : {{name}} </p>
+        <p>Book price : {{price}} </p>
+        <p>Book author : {{author}} </p>
+        <button @click="showBooks('total books= 200')">show books</button>
+        
+       </div><br>
+       <button @click="bookData=!bookData">
+        <span v-if=bookData>hide</span>
+        <span v-if="!bookData">show</span>
+    </button>
+
+       
+   </div>
+
+   <script>
+       const app = Vue.createApp({
+           data(){
+               return{
+                   name : "Hello JavaScript",
+                   price : 22000,
+                   author : "Bren Eich",
+                   bookData : true
+               }
+           },
+           methods:{
+               showBooks(item){
+                   alert(item)
+               }
+           }
+       })
+
+
+
+       app.mount(".data")
+   </script>
+</body>
+</html>
